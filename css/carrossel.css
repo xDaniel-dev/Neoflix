@@ -1,0 +1,84 @@
+.carrossel{
+    margin-top: 5rem;
+    max-width: 1300px;
+    width: 82%;
+    margin-left: 7rem;
+}
+.button-slide{  
+    display: none;
+    position: absolute;
+    height: 12.5rem;
+    width: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.411);
+    font-size: 2.2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.button-slide:active{
+    transform: scale(0.99);
+}
+#before-slide{
+   left: 4.7rem;
+}
+#next-slide{
+   right: 6rem;
+}
+.slider-wrappe{
+    display: flex;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
+    margin-bottom: 10px;
+    overflow:auto;
+    scrollbar-width: none;
+}
+.slider-wrappe::-webkit-scrollbar{
+    display: none;
+}
+.slider-wrappe .img{
+    all: initial;
+    cursor: pointer;
+}
+.slider-wrappe .img img{
+    width: 125px;
+    height: 200px;
+    object-fit: cover;
+}
+.slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+.scrollbar-track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+.scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
+.scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+.scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
